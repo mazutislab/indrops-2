@@ -1,0 +1,20 @@
+# conda env create -f environment.yml
+name: indrops-2
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  
+dependencies:
+  - conda-forge::python=3.7.3
+  - conda-forge::markdown=3.1.1
+  - conda-forge::pymdown-extensions=6.0
+  - conda-forge::pygments=2.5.2
+  - conda-forge::graphviz=2.42.3
+  - conda-forge::pandas=1.1.5
+  - conda-forge::numpy=1.19.2
+  - conda-forge::openpyxl=3.0.9
+  - bioconda::star=2.7.10b
+  - bioconda::samtools=1.11
+  - bioconda::seqkit=2.0.0
+  - bioconda::rseqc=5.0.1
