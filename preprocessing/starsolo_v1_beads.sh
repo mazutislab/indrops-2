@@ -21,7 +21,6 @@ for i in "${!genomic[@]}"; do
     
     # get file name
     prefix="${genomic[$i]%%.*}"
-    basename=$(basename "${prefix}")
     
     echo 'processing: ' $(basename "${prefix}")
     echo 'genomic: ' ${genomic[$i]}
@@ -32,7 +31,7 @@ for i in "${!genomic[@]}"; do
         --readFilesIn ${genomic[$i]} ${barcode[$i]} \
         --soloCBwhitelist $bc1 $bc2 \
         --runThreadN 16 \
-        --outFileNamePrefix ${prefix}/starsolo/${basename}. \
+        --outFileNamePrefix ${prefix}/starsolo/ \
         --sjdbOverhang 100 \
         --outSAMunmapped Within \
         --outSAMtype BAM SortedByCoordinate \
