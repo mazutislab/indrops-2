@@ -7,8 +7,8 @@ conda  activate indrops-2
 git clone https://github.com/mazutislab/indrops-2
 
 # barcode white list  
-bc1 = ( $(find $PWD -type f -name "v1_cb1.txt") )
-bc2 = ( $(find $PWD -type f -name "v1_cb2.txt") )
+bc1 = ( $(find $PWD -type f -name "v2_cb1.txt") )
+bc2 = ( $(find $PWD -type f -name "v2_cb2.txt") )
 
 # get barcode dirs to array
 barcode=( $(find $PWD -type f -name "*R1_001.fastq.gz") )
@@ -39,14 +39,12 @@ for i in "${!genomic[@]}"; do
         --outSAMattributes NH HI nM AS CR UR CB UB sS sQ sM GX GN \
         --runDirPerm All_RWX \
         --readFilesCommand zcat \
-        --soloAdapterSequence GAGTGATTGCTTGTGACGCCAA \
-        --soloAdapterMismatchesNmax 2 \
         --soloFeatures GeneFull \
         --soloType CB_UMI_Complex \
         --soloCBmatchWLtype EditDist_2 \
         --soloUMIdedup Exact \
-        --soloCBposition 0_0_2_-1 3_1_3_8 \
-        --soloUMIposition 3_9_3_16
+        --soloCBposition 0_0_0_7 0_12_0_19 \
+        --soloUMIposition 0_20_0_27
     
     echo 'done'
 
