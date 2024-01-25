@@ -7,8 +7,8 @@ conda  activate indrops-2
 git clone https://github.com/mazutislab/indrops-2
 
 # barcode white list  
-bc1 = ( $(find $PWD -type f -name "v2_cb1.txt") )
-bc2 = ( $(find $PWD -type f -name "v2_cb2.txt") )
+bc1=( $(find $PWD -type f -name "v2_cb1.txt") )
+bc2=( $(find $PWD -type f -name "v2_cb2.txt") )
 
 # get barcode dirs to array
 barcode=( $(find $PWD -type f -name "*R1_001.fastq.gz") )
@@ -19,8 +19,8 @@ genomic=( $(find $PWD -type f -name "*R2_001.fastq.gz") )
 # run starsolo
 for i in "${!genomic[@]}"; do
     
-    # get parent directory
-    prefix= "${genomic[$i]%%.*}"
+    # get file name
+    prefix="${genomic[$i]%%.*}"
     
     echo 'processing: ' $(basename "${prefix}")
     echo 'genomic: ' ${genomic[$i]}
