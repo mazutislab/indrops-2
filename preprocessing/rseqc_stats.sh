@@ -3,9 +3,6 @@
 # activate conda-env
 conda  activate indrops-2
 
-# get scripts
-git clone https://github.com/jsimonas/scrna-utils
-
 # get reference 
 human_bed_url="https://altushost-swe.dl.sourceforge.net/project/rseqc/BED/Human_Homo_sapiens/hg38_GENCODE_V42_Comprehensive.bed.gz"
 human_bed="hg38_GENCODE_V42_Comprehensive.bed"

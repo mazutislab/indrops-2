@@ -3,10 +3,7 @@
 # activate conda-env
 conda  activate indrops-2
 
-# clone repo to get barcodes
-git clone https://github.com/mazutislab/indrops-2
-
-# barcode white list  
+# barcode white list (download from 10X website)
 bc_whitelist='path/to/3M-february-2018.txt'
 
 # get barcode dirs to array
