@@ -16,7 +16,7 @@ genomic=( $(find $PWD -type f -name "*R2_001.fastq.gz") )
 for i in "${!genomic[@]}"; do
     
     # get parent directory
-    prefix= "${genomic[$i]%%.*}"
+    prefix="${genomic[$i]%%.*}"
     
     echo 'processing: ' $(basename "${prefix}")
     echo 'genomic: ' ${genomic[$i]}
